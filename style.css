@@ -1,7 +1,129 @@
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(249, 220, 236);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
-    margin-left: 20px;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: deeppink;
+}
+
+header h1 {
+    padding-left: 15px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 10px;
+    font-size: 15pt;
+    text-align: center;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+#about-me-content {
+    display: flex;
+}
+
+#about-me img {
+    width: 25%;
+    object-fit: contain;
+    margin: 15px;
+    align-self: center;
+}
+
+.card img,
+#contact img {
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    opacity: 0.6;
+    margin: 10px 0;
+}
+
+#contact img {
+    opacity: 0.7;
+}
+
+.card img:hover,
+#contact img:hover{
+    opacity: 1;
+    transition: .5 ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+
+.projects {
+    column-count: 2;
+}
+
+
+section h2 {
+    text-align: center;
+    background-color: lightpink;
+}
+
+section > div {
+    margin: 15px;
+}
+
+h3 {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+}
+
+footer,
+footer h2 {
+    background-color: deeppink;
+}
+
+#contact img {
+    height: 50px;
+}
+
+@media screen and (min-width: 900px) {
+    #my-work-content,
+    #about-me-content {
+        width: 880px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header,
+    nav ul,
+    #about-me-content {
+        flex-direction: column;
+    }
+    .projects {
+        column-count: 1;
+    }
+    nav ul li {
+        padding-right: 40px;
+    }
+    header h1 {
+        padding-left: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
 }
