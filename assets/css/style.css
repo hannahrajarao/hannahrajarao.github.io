@@ -37,6 +37,10 @@ header a {
     text-decoration: none;
 }
 
+#dark-mode-icon {
+    width: 20px;
+}
+
 main {
     margin-top: 100px;
 }
@@ -107,6 +111,28 @@ footer h2 {
 
 #contact img {
     height: 50px;
+}
+
+@media (prefers-color-scheme: dark) {
+    header,
+    footer {
+        background-color: #151515;
+    }
+    header a {
+        color: deeppink;
+    }
+    body {
+        color: white;
+        background-color: #151515;
+    }
+    main h2 {
+        color: lightpink;
+        background-color: #151515;
+        border-bottom: 2px solid lightpink;
+    }
+    footer img {
+        filter: invert(95%);
+    }
 }
 
 @media screen and (min-width: 900px) {
